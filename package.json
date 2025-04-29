@@ -1,8 +1,8 @@
 {
-  "name": "sveltekit-endpoint-link",
-  "displayName": "SvelteKit Endpoint Link Opener",
+  "name": "sveltekit-smart-endpoints",
+  "displayName": "SvelteKit Smart Endpoints",
   "description": "Ctrl/Cmd-click fetch('/backend/...') to open the matching +server file.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "OleksiiDukhovenko",
   "license": "MIT",
   "engines": {
@@ -18,6 +18,15 @@
     "routes",
     "link"
   ],
+  "capabilities": {
+    "documentLinkProvider": {
+      "languages": [
+        "javascript",
+        "typescript",
+        "svelte"
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/oleksiy131/sveltekit-smart-endpoints"
@@ -26,16 +35,13 @@
     "url": "https://github.com/oleksiy131/sveltekit-smart-endpoints/issues"
   },
   "homepage": "https://github.com/oleksiy131/sveltekit-smart-endpoints",
-  "activationEvents": [
-    "onLanguage:javascript",
-    "onLanguage:typescript",
-    "onLanguage:svelte"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
+  "browser": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "sveltekit-endpoint-link.openEndpoint",
+        "command": "sveltekit-smart-endpoints.openEndpoint",
         "title": "Open SvelteKit Endpoint"
       }
     ],
@@ -52,9 +58,9 @@
     ],
     "configuration": {
       "type": "object",
-      "title": "SvelteKit Endpoint Link Settings",
+      "title": "SvelteKit Smart Endpoints Settings",
       "properties": {
-        "sveltekit-endpoint-link.endpointFolder": {
+        "sveltekit-smart-endpoints.endpointFolder": {
           "type": "string",
           "default": "api",
           "description": "Name of the folder inside /src/routes that contains your server endpoints (e.g. \"api\", \"backend\")."

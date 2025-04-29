@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     context.subscriptions.push(
         vscode.commands.registerCommand(
-            "sveltekit-endpoint-link.openEndpoint",
+            "sveltekit-smart-endpoints.openEndpoint",
             (uri: vscode.Uri) => openEndpoint(uri)
         )
     );
@@ -67,7 +67,7 @@ class EndpointLinkProvider implements vscode.DocumentLinkProvider {
         if (!workspace) return [];
 
         const folderSetting = vscode.workspace
-            .getConfiguration("sveltekit-endpoint-link")
+            .getConfiguration("sveltekit-smart-endpoints")
             .get<string>("endpointFolder", "api")
             .replace(/^\/|\/$/g, "");          // strip leading/trailing /
 
