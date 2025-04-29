@@ -17,6 +17,14 @@
     "routes",
     "link"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oleksiy131/sveltekit-smart-endpoints"
+  },
+  "bugs": {
+    "url": "https://github.com/oleksiy131/sveltekit-smart-endpoints/issues"
+  },
+  "homepage": "https://github.com/oleksiy131/sveltekit-smart-endpoints",
   "activationEvents": [
     "onLanguage:javascript",
     "onLanguage:typescript",
