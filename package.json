@@ -4,6 +4,7 @@
   "description": "Ctrl/Cmd-click fetch('/backend/...') to open the matching +server file.",
   "version": "0.0.8",
   "publisher": "OleksiiDukhovenko",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.90.0"
   },

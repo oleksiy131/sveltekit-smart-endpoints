@@ -1,3 +1,4 @@
 out/tests
 src/**
 .vscode/**
+sveltekit-smart-endpoints/**
