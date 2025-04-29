@@ -2,7 +2,7 @@
   "name": "sveltekit-endpoint-link",
   "displayName": "SvelteKit Endpoint Link Opener",
   "description": "Ctrl/Cmd-click fetch('/backend/...') to open the matching +server file.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "OleksiiDukhovenko",
   "engines": {
     "vscode": "^1.90.0"
