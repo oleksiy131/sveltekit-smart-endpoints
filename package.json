@@ -1,0 +1,68 @@
+{
+  "name": "sveltekit-endpoint-link",
+  "displayName": "SvelteKit Endpoint Link Opener",
+  "description": "Ctrl/Cmd-click fetch('/backend/...') to open the matching +server file.",
+  "version": "0.0.5",
+  "publisher": "OleksiiDukhovenko",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "icon": "images/icon.png",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "sveltekit",
+    "endpoint",
+    "routes",
+    "link"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:svelte"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sveltekit-endpoint-link.openEndpoint",
+        "title": "Open SvelteKit Endpoint"
+      }
+    ],
+    "languages": [
+      {
+        "id": "svelte",
+        "aliases": [
+          "Svelte"
+        ],
+        "extensions": [
+          ".svelte"
+        ]
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "SvelteKit Endpoint Link Settings",
+      "properties": {
+        "sveltekit-endpoint-link.endpointFolder": {
+          "type": "string",
+          "default": "api",
+          "description": "Name of the folder inside /src/routes that contains your server endpoints (e.g. \"api\", \"backend\")."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "vscode:prepublish": "npm run compile",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.15",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.3.0",
+    "typescript": "^5.4.0"
+  }
+}
