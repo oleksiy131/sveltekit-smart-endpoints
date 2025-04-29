@@ -2,7 +2,7 @@
   "name": "sveltekit-smart-endpoints",
   "displayName": "SvelteKit Smart Endpoints",
   "description": "Ctrl/Cmd-click fetch('/backend/...') to open the matching +server file.",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "publisher": "OleksiiDukhovenko",
   "license": "MIT",
   "engines": {
